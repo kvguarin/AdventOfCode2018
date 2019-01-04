@@ -6,14 +6,14 @@ public class Driver {
 		
 		
 		//dayOneChronalCalibration(); //Answer: 490
-		dayOneFirstDoubleFrequency(); //Answer: 70357
-		
+		//dayOneFirstDoubleFrequency(); //Answer: 70357
+		dayTwoInventoryManagementSystem();
 		
 	}
 	
 	
 	/*
-	 * Answer for Day One: Chronal Calibration
+	 * Day One: Chronal Calibration
 	 */
 	public static  void dayOneChronalCalibration() {
 		int dayOneAnswer = 0;
@@ -33,6 +33,11 @@ public class Driver {
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
 		doubleFrequency = dayOne.firstDoubleFrequency(dayOneInput);
 		System.out.println("Day One First Double Frequency Answer: " + doubleFrequency);
+	}
+	
+	
+	public static void dayTwoInventoryManagementSystem() {
+		
 	}
 	
 
