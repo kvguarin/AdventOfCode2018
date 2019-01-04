@@ -6,7 +6,8 @@ public class Driver {
 
 		// dayOnePartOne(); //Answer: 490
 		// dayOnePartTwo(); //Answer: 70357
-		dayTwoPartOne(); // Answer: 7470
+		// dayTwoPartOne(); // Answer: 7470
+		dayTwoPartTwo();
 
 	}
 
@@ -39,9 +40,21 @@ public class Driver {
 		DayTwo dayTwo = new DayTwo();
 		Integer checksum;
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
-		dayTwo.parseFile(dayTwoInput);
+		dayTwo.findCheckSum(dayTwoInput);
 		checksum = dayTwo.twice * dayTwo.thrice;
 		System.out.println("The checksum is " + checksum);
+	}
+
+	/*
+	 * Day Two Part Two: Common Letters between the two correct box IDs
+	 */
+	public static void dayTwoPartTwo() {
+		DayTwo dayTwo = new DayTwo();
+		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
+		// File dayTwoInput = new File(
+		// "/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayTwoInputTest2");
+		dayTwo.commonLetters(dayTwoInput);
+		System.out.println(dayTwo.idLetters);
 	}
 
 }
