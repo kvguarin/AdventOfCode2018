@@ -156,8 +156,8 @@ public class DayTwo {
 	}
 
 	/*
-	 * Compares two IDs. If the IDs differ by only one letter, then it prints
-	 * out those IDs.
+	 * Compares two IDs. If the IDs differ by only one letter, then it calls
+	 * another function to find the common letters of those two IDs
 	 */
 	public void compareIDs(String id1, String id2) {
 		int difference = 0;
@@ -168,23 +168,20 @@ public class DayTwo {
 		}
 		if (difference == 1) {
 			idsFound = true;
-			System.out.println("Box ID One: " + id1);
-			System.out.println("Box ID Two: " + id2);
 			commonLetters(id1, id2);
 		}
 	}
 
 	/*
 	 * Takes the two box IDs that differ by only one letter and finds the common
-	 * letters between the two of them
+	 * letters between the two of them. Saves that value.
 	 */
 	public void commonLetters(String id1, String id2) {
-		for (int i = 0; i < id1.length(); i++){
-			if (id1.charAt(i) == id2.charAt(i)){
-				idLetters+= id1.charAt(i);
+		for (int i = 0; i < id1.length(); i++) {
+			if (id1.charAt(i) == id2.charAt(i)) {
+				idLetters += id1.charAt(i);
 			}
 		}
-
 	}
 
 }

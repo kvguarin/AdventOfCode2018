@@ -1,5 +1,7 @@
 import java.io.File;
 
+import org.omg.PortableServer.ServantActivator;
+
 public class Driver {
 
 	public static void main(String[] args) {
@@ -7,7 +9,8 @@ public class Driver {
 		// dayOnePartOne(); //Answer: 490
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
-		dayTwoPartTwo();
+		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
+		dayThreePartOne();
 
 	}
 
@@ -19,7 +22,7 @@ public class Driver {
 		DayOne dayOne = new DayOne();
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
 		dayOneAnswer = dayOne.findFrequency(dayOneInput);
-		System.out.println("Day One Chronal Calibration Answer: " + dayOneAnswer);
+		System.out.println("Day One Part One: " + dayOneAnswer);
 	}
 
 	/*
@@ -30,7 +33,7 @@ public class Driver {
 		DayOne dayOne = new DayOne();
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
 		doubleFrequency = dayOne.firstDoubleFrequency(dayOneInput);
-		System.out.println("Day One First Double Frequency Answer: " + doubleFrequency);
+		System.out.println("Day One Part Two: " + doubleFrequency);
 	}
 
 	/*
@@ -42,7 +45,7 @@ public class Driver {
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.findCheckSum(dayTwoInput);
 		checksum = dayTwo.twice * dayTwo.thrice;
-		System.out.println("The checksum is " + checksum);
+		System.out.println("Day Two Part One " + checksum);
 	}
 
 	/*
@@ -51,10 +54,15 @@ public class Driver {
 	public static void dayTwoPartTwo() {
 		DayTwo dayTwo = new DayTwo();
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
-		// File dayTwoInput = new File(
-		// "/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayTwoInputTest2");
 		dayTwo.commonLetters(dayTwoInput);
-		System.out.println(dayTwo.idLetters);
+		System.out.println("Day Two Part Two " + dayTwo.idLetters);
+	}
+
+	/*
+	 * Day Three Part One: 
+	 */
+	public static void dayThreePartOne() {
+
 	}
 
 }
