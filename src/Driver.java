@@ -10,7 +10,7 @@ public class Driver {
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
 //		dayThreePartOne(); // Answer: 105231
-		dayThreePartTwo();
+		dayThreePartTwo(); //Answer: 164
 
 	}
 
@@ -69,14 +69,18 @@ public class Driver {
 		System.out.println("Day Three Part One: " + dayThree.countDoubleClaims());
 	}
 	
+	/*
+	 * Day Three Part Two: No Matter How You Slice It
+	 */
 	public static void dayThreePartTwo(){
 		DayThree dayThree = new DayThree();
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
 //		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
-		System.out.println("Day Three Part Two: " + dayThree.getUniqueClaim());
-//		dayThree.printGrid();
+//		System.out.println("Day Three Part Two: " + dayThree.getUniqueClaim());
+		dayThree.findUniqueClaim(file);
+		System.out.println("Day Three Part Three: " + dayThree.getUniqueClaim());
 	}
 
 }

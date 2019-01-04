@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.omg.CORBA.IntHolder;
+
 public class DayThree {
 
 	// private Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
@@ -17,12 +19,11 @@ public class DayThree {
 	 */
 	public void makeGrid(File file) {
 		BufferedReader reader;
-		Integer claimNumber = 0;
+		Integer claimID = 0;
 		int x;
 		int y;
 		int width;
 		int height;
-		String claimID;
 
 		try {
 			reader = new BufferedReader(new FileReader(file));
@@ -30,13 +31,12 @@ public class DayThree {
 
 			// gets x, y coordinate from line and inserts claim into the grid
 			while ((line = reader.readLine()) != null) {
-//				claimNumber++;
+				claimID++;
 				x = getPointX(line);
 				y = getPointY(line);
 				width = getWidth(line);
 				height = getHeight(line);
-				claimID = getClaimID(line);
-				insertClaim(claimID, x, y, width, height);
+				insertClaim(claimID.toString(), x, y, width, height);
 			}
 			reader.close();
 
@@ -98,24 +98,24 @@ public class DayThree {
 	 * will change the value to X. Otherwise, will insert the claim number
 	 */
 	private void insertClaim(String claimNumber, int x, int y, int width, int height) {
-		Boolean overlap = false;
+		// Boolean overlap = false;
 		for (int i = x; i < x + width; i++) {
 			for (int j = y; j < y + height; j++) {
 
 				// Checks if quadrant was already claimed
-				if (grid[j][i].compareTo(".") == 0 ) {
+				if (grid[j][i].compareTo(".") == 0) {
 					grid[j][i] = claimNumber;
 				} else {
-					overlap = true;
+					// overlap = true;
 					grid[j][i] = "X";
 				}
 			}
 		}
 
-		if (!overlap){
-			uniqueClaim = Integer.parseInt(claimNumber);
-			System.out.println("Unique claim is now "+ claimNumber);
-		}
+		// if (!overlap){
+		// uniqueClaim = Integer.parseInt(claimNumber);
+		// System.out.println("Unique claim is now "+ claimNumber);
+		// }
 
 	}
 
@@ -157,8 +157,65 @@ public class DayThree {
 		}
 		return x;
 	}
-	
-	public int getUniqueClaim(){
+
+	/*
+	 * Passes over each claim again and checks if it is unique
+	 */
+	public void findUniqueClaim(File file) {
+		BufferedReader reader;
+		Integer claimID = 0;
+		int x;
+		int y;
+		int width;
+		int height;
+
+		try {
+			reader = new BufferedReader(new FileReader(file));
+			String line;
+
+			// gets x, y coordinate from line and inserts claim into the grid
+			while ((line = reader.readLine()) != null) {
+				claimID++;
+				x = getPointX(line);
+				y = getPointY(line);
+				width = getWidth(line);
+				height = getHeight(line);
+				// insertClaim(claimID.toString(), x, y, width, height);
+				checkClaim(claimID, x, y, width, height);
+			}
+			reader.close();
+
+		} catch (FileNotFoundException e) {
+			System.out.println("File not Found");
+			e.printStackTrace();
+
+		} catch (IOException e) {
+			System.out.println("Unhandeled IO Exception");
+			e.printStackTrace();
+		}
+
+	}
+
+	/*
+	 * Checkes to see if claim is unique
+	 */
+	private void checkClaim(Integer claimID, int x, int y, int width, int height) {
+		for (int i = x; i < x + width; i++) {
+			for (int j = y; j < y + height; j++) {
+
+				// Checks if quadrant was already claimed
+				if (grid[j][i].compareTo(claimID.toString()) != 0) {
+					return;
+				}
+			}
+		}
+		uniqueClaim = claimID;
+	}
+
+	/*
+	 * Returns the unique claim
+	 */
+	public int getUniqueClaim() {
 		return uniqueClaim;
 	}
 
