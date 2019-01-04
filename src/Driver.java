@@ -8,7 +8,7 @@ public class Driver {
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
-		 dayThreePartOne();
+		 dayThreePartOne(); //Answer: 105231
 
 	}
 
@@ -50,8 +50,9 @@ public class Driver {
 	 */
 	public static void dayTwoPartTwo() {
 		DayTwo dayTwo = new DayTwo();
-		File txtFile = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
-		dayTwo.commonLetters(txtFile);
+
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
+		dayTwo.commonLetters(file);
 		System.out.println("Day Two Part Two " + dayTwo.getidLetters());
 	}
 
@@ -60,9 +61,14 @@ public class Driver {
 	 */
 	public static void dayThreePartOne() {
 		DayThree dayThree = new DayThree();
-		File file = new File(
-				"/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
+		dayThree.initializeGrid();
+
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
+//		File file = new File(
+//				"/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 		dayThree.makeGrid(file);
+		dayThree.printGrid();
+		dayThree.countDoubleClaims();
 	}
 
 }
