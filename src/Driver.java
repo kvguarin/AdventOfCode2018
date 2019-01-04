@@ -78,9 +78,16 @@ public class Driver {
 //		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
-//		System.out.println("Day Three Part Two: " + dayThree.getUniqueClaim());
 		dayThree.findUniqueClaim(file);
 		System.out.println("Day Three Part Three: " + dayThree.getUniqueClaim());
+	}
+	
+	
+	/*
+	 * Day Four Part One
+	 */
+	public static void dayFourPartOne() {
+		
 	}
 
 }
