@@ -9,8 +9,8 @@ public class Driver {
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
-//		dayThreePartOne(); // Answer: 105231
-//		dayThreePartTwo(); //Answer: 164
+		// dayThreePartOne(); // Answer: 105231
+		// dayThreePartTwo(); //Answer: 164
 
 	}
 
@@ -23,6 +23,7 @@ public class Driver {
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayOneInput");
 		dayOneAnswer = dayOne.findFrequency(dayOneInput);
 		System.out.println("Day One Part One: " + dayOneAnswer);
+		return;
 	}
 
 	/*
@@ -34,6 +35,7 @@ public class Driver {
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayOneInput");
 		doubleFrequency = dayOne.firstDoubleFrequency(dayOneInput);
 		System.out.println("Day One Part Two: " + doubleFrequency);
+		return;
 	}
 
 	/*
@@ -45,6 +47,7 @@ public class Driver {
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.findCheckSum(dayTwoInput);
 		System.out.println("Day Two Part One " + dayTwo.getCheckSum());
+		return;
 	}
 
 	/*
@@ -52,10 +55,10 @@ public class Driver {
 	 */
 	public static void dayTwoPartTwo() {
 		DayTwo dayTwo = new DayTwo();
-
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.commonLetters(file);
 		System.out.println("Day Two Part Two " + dayTwo.getidLetters());
+		return;
 	}
 
 	/*
@@ -67,27 +70,29 @@ public class Driver {
 		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
 		System.out.println("Day Three Part One: " + dayThree.countDoubleClaims());
+		return;
 	}
-	
+
 	/*
 	 * Day Three Part Two: No Matter How You Slice It
 	 */
-	public static void dayThreePartTwo(){
+	public static void dayThreePartTwo() {
 		DayThree dayThree = new DayThree();
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
-//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
+		// File file = new
+		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
 		dayThree.findUniqueClaim(file);
 		System.out.println("Day Three Part Three: " + dayThree.getUniqueClaim());
+		return;
 	}
-	
-	
+
 	/*
 	 * Day Four Part One: Repose Record
 	 */
 	public static void dayFourPartOne() {
-		
+		return;
 	}
 
 }

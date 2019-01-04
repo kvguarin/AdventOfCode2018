@@ -45,6 +45,7 @@ public class DayThree {
 			System.out.println("Unhandeled IO Exception");
 			e.printStackTrace();
 		}
+		return;
 	}
 
 	/*
@@ -98,6 +99,7 @@ public class DayThree {
 				}
 			}
 		}
+		return;
 	}
 
 	/*
@@ -109,6 +111,7 @@ public class DayThree {
 				grid[i][j] = ".";
 			}
 		}
+		return;
 	}
 
 	/*
@@ -121,10 +124,11 @@ public class DayThree {
 			}
 			System.out.println();
 		}
+		return;
 	}
 
 	/*
-	 * Counts the number of qudrants that were claimed more than twice and
+	 * Counts the number of quadrants that were claimed more than twice and
 	 * returns that number
 	 */
 	public int countDoubleClaims() {
@@ -174,6 +178,7 @@ public class DayThree {
 			System.out.println("Unhandeled IO Exception");
 			e.printStackTrace();
 		}
+		return;
 
 	}
 
@@ -191,6 +196,7 @@ public class DayThree {
 			}
 		}
 		uniqueClaim = claimID;
+		return;
 	}
 
 	/*
