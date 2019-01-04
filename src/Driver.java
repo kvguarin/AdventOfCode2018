@@ -1,7 +1,5 @@
 import java.io.File;
 
-import org.omg.PortableServer.ServantActivator;
-
 public class Driver {
 
 	public static void main(String[] args) {
@@ -10,7 +8,7 @@ public class Driver {
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
-		// dayThreePartOne();
+		 dayThreePartOne();
 
 	}
 
@@ -62,9 +60,9 @@ public class Driver {
 	 */
 	public static void dayThreePartOne() {
 		DayThree dayThree = new DayThree();
-		File txtFile = new File(
+		File file = new File(
 				"/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
-
+		dayThree.makeGrid(file);
 	}
 
 }
