@@ -10,7 +10,7 @@ public class Driver {
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
-		dayThreePartOne();
+		// dayThreePartOne();
 
 	}
 
@@ -20,7 +20,7 @@ public class Driver {
 	public static void dayOnePartOne() {
 		int dayOneAnswer = 0;
 		DayOne dayOne = new DayOne();
-		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
+		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayOneInput");
 		dayOneAnswer = dayOne.findFrequency(dayOneInput);
 		System.out.println("Day One Part One: " + dayOneAnswer);
 	}
@@ -31,7 +31,7 @@ public class Driver {
 	public static void dayOnePartTwo() {
 		int doubleFrequency = 0;
 		DayOne dayOne = new DayOne();
-		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
+		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayOneInput");
 		doubleFrequency = dayOne.firstDoubleFrequency(dayOneInput);
 		System.out.println("Day One Part Two: " + doubleFrequency);
 	}
@@ -44,8 +44,7 @@ public class Driver {
 		Integer checksum;
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.findCheckSum(dayTwoInput);
-		checksum = dayTwo.twice * dayTwo.thrice;
-		System.out.println("Day Two Part One " + checksum);
+		System.out.println("Day Two Part One " + dayTwo.getCheckSum());
 	}
 
 	/*
@@ -53,15 +52,18 @@ public class Driver {
 	 */
 	public static void dayTwoPartTwo() {
 		DayTwo dayTwo = new DayTwo();
-		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
-		dayTwo.commonLetters(dayTwoInput);
-		System.out.println("Day Two Part Two " + dayTwo.idLetters);
+		File txtFile = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
+		dayTwo.commonLetters(txtFile);
+		System.out.println("Day Two Part Two " + dayTwo.getidLetters());
 	}
 
 	/*
-	 * Day Three Part One: 
+	 * Day Three Part One: No Matter How You Slice It
 	 */
 	public static void dayThreePartOne() {
+		DayThree dayThree = new DayThree();
+		File txtFile = new File(
+				"/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 
 	}
 

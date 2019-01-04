@@ -13,10 +13,10 @@ import java.util.TreeMap;
 
 public class DayTwo {
 
-	int twice = 0;
-	int thrice = 0;
-	String idLetters = "";
-	Boolean idsFound = false;
+	private int twice = 0;
+	private int thrice = 0;
+	private String idLetters = "";
+	private Boolean idsFound = false;
 
 	/*
 	 * Opens the file, and goes line by line and calculates how many letters
@@ -182,6 +182,18 @@ public class DayTwo {
 				idLetters += id1.charAt(i);
 			}
 		}
+	}
+
+	/*
+	 * Returns the common letters between the two box IDs that differ by one
+	 * letter
+	 */
+	public String getidLetters() {
+		return idLetters;
+	}
+	
+	public int getCheckSum(){
+		return twice * thrice;
 	}
 
 }
