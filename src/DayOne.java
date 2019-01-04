@@ -6,8 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /*
- * Reads the file then returns
- * the frequency 
+ * Written by Kylie Guarin
+ * See: https://adventofcode.com/2018/day/1
+ * 
  */
 public class DayOne {
 	
