@@ -6,7 +6,7 @@ public class Driver {
 
 		// dayOneChronalCalibration(); //Answer: 490
 		// dayOneFirstDoubleFrequency(); //Answer: 70357
-		dayTwoInventoryManagementSystem();
+		dayTwoPartOne();
 
 	}
 
@@ -32,8 +32,11 @@ public class Driver {
 		System.out.println("Day One First Double Frequency Answer: " + doubleFrequency);
 	}
 
-	public static void dayTwoInventoryManagementSystem() {
-
+	public static void dayTwoPartOne() {
+		DayTwo dayTwo = new DayTwo();
+//		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayTwoInputTest1");
+		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
+		dayTwo.parseFile(dayTwoInput);
 	}
 
 }
