@@ -10,6 +10,7 @@ public class DayThree {
 	private int gridWidth = 1000;
 	private int gridHeight = 1000;
 	private String[][] grid = new String[gridWidth][gridHeight];
+	private int uniqueClaim = 0;
 
 	/*
 	 * Reads the file and makes the grid
@@ -21,6 +22,7 @@ public class DayThree {
 		int y;
 		int width;
 		int height;
+		String claimID;
 
 		try {
 			reader = new BufferedReader(new FileReader(file));
@@ -28,12 +30,13 @@ public class DayThree {
 
 			// gets x, y coordinate from line and inserts claim into the grid
 			while ((line = reader.readLine()) != null) {
-				claimNumber++;
+//				claimNumber++;
 				x = getPointX(line);
 				y = getPointY(line);
 				width = getWidth(line);
 				height = getHeight(line);
-				insertClaim(claimNumber.toString(), x, y, width, height);
+				claimID = getClaimID(line);
+				insertClaim(claimID, x, y, width, height);
 			}
 			reader.close();
 
@@ -95,17 +98,25 @@ public class DayThree {
 	 * will change the value to X. Otherwise, will insert the claim number
 	 */
 	private void insertClaim(String claimNumber, int x, int y, int width, int height) {
+		Boolean overlap = false;
 		for (int i = x; i < x + width; i++) {
 			for (int j = y; j < y + height; j++) {
 
 				// Checks if quadrant was already claimed
-				if (grid[j][i].compareTo(".") == 0) {
+				if (grid[j][i].compareTo(".") == 0 ) {
 					grid[j][i] = claimNumber;
 				} else {
+					overlap = true;
 					grid[j][i] = "X";
 				}
 			}
 		}
+
+		if (!overlap){
+			uniqueClaim = Integer.parseInt(claimNumber);
+			System.out.println("Unique claim is now "+ claimNumber);
+		}
+
 	}
 
 	/*
@@ -145,6 +156,10 @@ public class DayThree {
 			}
 		}
 		return x;
+	}
+	
+	public int getUniqueClaim(){
+		return uniqueClaim;
 	}
 
 }

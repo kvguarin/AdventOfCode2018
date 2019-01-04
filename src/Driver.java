@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Driver {
 
@@ -8,7 +9,8 @@ public class Driver {
 		// dayOnePartTwo(); //Answer: 70357
 		// dayTwoPartOne(); // Answer: 7470
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
-		 dayThreePartOne(); //Answer: 105231
+//		dayThreePartOne(); // Answer: 105231
+		dayThreePartTwo();
 
 	}
 
@@ -61,13 +63,20 @@ public class Driver {
 	 */
 	public static void dayThreePartOne() {
 		DayThree dayThree = new DayThree();
-		dayThree.initializeGrid();
-
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
-//		File file = new File(
-//				"/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
+		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
 		System.out.println("Day Three Part One: " + dayThree.countDoubleClaims());
+	}
+	
+	public static void dayThreePartTwo(){
+		DayThree dayThree = new DayThree();
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
+//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
+		dayThree.initializeGrid();
+		dayThree.makeGrid(file);
+		System.out.println("Day Three Part Two: " + dayThree.getUniqueClaim());
+//		dayThree.printGrid();
 	}
 
 }
