@@ -4,16 +4,16 @@ public class Driver {
 
 	public static void main(String[] args) {
 
-		// dayOneChronalCalibration(); //Answer: 490
-		// dayOneFirstDoubleFrequency(); //Answer: 70357
-		dayTwoPartOne();
+		// dayOnePartOne(); //Answer: 490
+		// dayOnePartTwo(); //Answer: 70357
+		dayTwoPartOne(); // Answer: 7470
 
 	}
 
 	/*
-	 * Day One: Chronal Calibration
+	 * Day One Part One: Chronal Calibration
 	 */
-	public static void dayOneChronalCalibration() {
+	public static void dayOnePartOne() {
 		int dayOneAnswer = 0;
 		DayOne dayOne = new DayOne();
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
@@ -22,9 +22,9 @@ public class Driver {
 	}
 
 	/*
-	 * Day One: Find the first double frequency
+	 * Day One Part Two: Find the first double frequency
 	 */
-	public static void dayOneFirstDoubleFrequency() {
+	public static void dayOnePartTwo() {
 		int doubleFrequency = 0;
 		DayOne dayOne = new DayOne();
 		File dayOneInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/DayOneInput");
@@ -32,11 +32,16 @@ public class Driver {
 		System.out.println("Day One First Double Frequency Answer: " + doubleFrequency);
 	}
 
+	/*
+	 * Day Two Part One: Find checksum of box IDs
+	 */
 	public static void dayTwoPartOne() {
 		DayTwo dayTwo = new DayTwo();
-//		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayTwoInputTest1");
+		Integer checksum;
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.parseFile(dayTwoInput);
+		checksum = dayTwo.twice * dayTwo.thrice;
+		System.out.println("The checksum is " + checksum);
 	}
 
 }
