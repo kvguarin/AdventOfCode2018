@@ -12,9 +12,12 @@ public class DayFour {
 	private Map<String, String> chronMap = new TreeMap<>(); // chronologically
 															// organized file
 
-	//Sorts individual guard Sleep times
+	// Sorts individual guard Sleep times
 	private Map<Integer, Map<Integer, Integer>> guardMap = new TreeMap<>();
-	
+	private int worstGuard = 0; // guard that is asleep the most
+	private int guardSleepTime = 0; // Number of minutes the worst guard is
+									// asleep
+
 	public void organizeFile(File file) {
 		BufferedReader reader;
 
@@ -35,7 +38,6 @@ public class DayFour {
 			System.out.println("Unhandeled IO Exception");
 			e.printStackTrace();
 		}
-		printMap();
 		return;
 	}
 
@@ -52,11 +54,19 @@ public class DayFour {
 	/*
 	 * Prints the contents of the map
 	 */
-	private void printMap() {
+	public void printMap() {
 		for (Map.Entry<String, String> entry : chronMap.entrySet()) {
 			System.out.print(entry.getKey());
 			System.out.println(entry.getValue());
 		}
+	}
+
+	/*
+	 * Organizes the information of the guards' shifts. Sorts it by guard, and
+	 * number of times the guard is asleep during each minute
+	 */
+	public void createGuardMap() {
+
 	}
 
 }
