@@ -96,6 +96,7 @@ public class Driver {
 		DayFour dayFour = new DayFour();
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
 		dayFour.organizeFile(file);
+		dayFour.createGuardMap();
 		// TODO: make another map that is organized by guard Number and sleep
 		// times
 		// From there, calculate the guard who has slept the most

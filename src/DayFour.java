@@ -66,6 +66,34 @@ public class DayFour {
 	 * number of times the guard is asleep during each minute
 	 */
 	public void createGuardMap() {
+		// go through each entry in the chronMap
+		int guard; // guard number
+		int fallsAsleep; // time guard falls asleep
+		int wakesUp; // time guard wakes up
+		String[] value;
+
+		for (Map.Entry<String, String> entry : chronMap.entrySet()) {
+			// three cases: guard begins shift, guard sleeps, guard wakes up
+
+			// get guard number
+			if (entry.getValue().startsWith(" Guard")) {
+				value = entry.getValue().replaceAll("#", "").split(" ");
+				guard = Integer.parseInt(value[2]);
+
+				
+			} else if (entry.getValue().startsWith(" falls")) {
+				//time guard falls asleep
+				System.out.println(entry.getKey());
+				System.out.println(entry.getKey().substring(entry.getKey().length()-3, entry.getKey().length()-1));
+				fallsAsleep = Integer.parseInt(entry.getKey().substring(entry.getKey().length()-3, entry.getKey().length()-1));
+				
+			} else { 
+				//time guard wakes up Save this onto the tree
+				System.out.println(entry.getValue());
+				wakesUp = Integer.parseInt(entry.getKey().substring(entry.getKey().length()-3, entry.getKey().length()-1));
+				
+			}
+		}
 
 	}
 
