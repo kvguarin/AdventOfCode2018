@@ -1,6 +1,8 @@
 import java.io.File;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import org.omg.PortableServer.ServantActivator;
+
 public class Driver {
 
 	public static void main(String[] args) {
@@ -11,7 +13,8 @@ public class Driver {
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
 		// dayThreePartOne(); // Answer: 105231
 		// dayThreePartTwo(); //Answer: 164
-		dayFourPartOne(); //Ansswer: 98640
+		// dayFourPartOne(); //Answer: 98640
+		dayFourPartTwo(); //Answer: 9763
 
 	}
 
@@ -94,17 +97,28 @@ public class Driver {
 	 */
 	public static void dayFourPartOne() {
 		DayFour dayFour = new DayFour();
-//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
+		// File file = new
+		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
-		
+
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
-//		dayFour.printGuardMap();
 		dayFour.findLazyGuard();
-		// TODO: make another map that is organized by guard Number and sleep
-		// times
-		// From there, calculate the guard who has slept the most
-		// Afterwards, Find the time that he is most likely asleep
+		return;
+	}
+
+	/*
+	 * Day Four Part Two: Repose Record
+	 */
+	public static void dayFourPartTwo() {
+		DayFour dayFour = new DayFour();
+//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
+		 File file = new
+		 File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
+
+		dayFour.organizeFile(file);
+		dayFour.createGuardMap();
+		dayFour.findMinuteMan();
 		return;
 	}
 

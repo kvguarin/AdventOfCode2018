@@ -219,9 +219,61 @@ public class DayFour {
 	
 	
 	/*
-	 * 
+	 * Finds the guard that is most frequently asleep in the same minute
 	 */
 	public void findMinuteMan(){
+		int guard = 0; // Guard with the most sleepmins
+		int totalMins = 0; // Number of minutes guard was asleep
+		int minute = 0; // Most Likely minute Guard will be asleep
+		int numTimes = 0;
+		int currGuard;
+		int curTotalMins; // Number of mins guard was asleep
+		int curMinute = 0; // Most likely minute current guard will be asleep
+		int curNumTimes; // Number of times asleep at minute
+		// int
+
+		// first calculate the sleepMins
+		// if More than current sleepMins, then update lazyGuard, sleepMins, and
+		// mins
+
+		for (Map.Entry<Integer, Map<Integer, Integer>> entry : guardMap.entrySet()) {
+
+			currGuard = entry.getKey();
+			curTotalMins = 0;
+			curNumTimes = 0;
+			for (Map.Entry<Integer, Integer> entry2 : entry.getValue().entrySet()) {
+
+				System.out.print("Guard: " + entry.getKey() + " ");
+				System.out.print("Minute: " + entry2.getKey() + " ");
+				System.out.println("Number of Times Asleep: " + entry2.getValue());
+
+				// increment total minutes guard was asleep
+//				curTotalMins += entry2.getValue();
+
+				// If number of times asleep is more than current number of
+				// times, then it will change the current number of times this
+				// guard was asleep at said time
+				if (entry2.getValue() > curNumTimes) {
+					curNumTimes = entry2.getValue();
+					curMinute = entry2.getKey();
+				}
+			}
+
+			if (curNumTimes > numTimes) {
+				numTimes = curNumTimes;
+				guard = currGuard;
+				minute = curMinute;
+
+			}
+
+		}
+
+		System.out.println("Guard: " + guard);
+		System.out.println("Total mins " + totalMins);
+		System.out.println("Most likely minute " + minute);
+		System.out.println("Answer : " + guard + " * " + minute + " = " + guard * minute);
+
+		
 		
 	}
 
