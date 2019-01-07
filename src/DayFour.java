@@ -243,13 +243,6 @@ public class DayFour {
 			curNumTimes = 0;
 			for (Map.Entry<Integer, Integer> entry2 : entry.getValue().entrySet()) {
 
-				System.out.print("Guard: " + entry.getKey() + " ");
-				System.out.print("Minute: " + entry2.getKey() + " ");
-				System.out.println("Number of Times Asleep: " + entry2.getValue());
-
-				// increment total minutes guard was asleep
-//				curTotalMins += entry2.getValue();
-
 				// If number of times asleep is more than current number of
 				// times, then it will change the current number of times this
 				// guard was asleep at said time
@@ -272,9 +265,7 @@ public class DayFour {
 		System.out.println("Total mins " + totalMins);
 		System.out.println("Most likely minute " + minute);
 		System.out.println("Answer : " + guard + " * " + minute + " = " + guard * minute);
-
-		
-		
+		return;
 	}
 
 }
