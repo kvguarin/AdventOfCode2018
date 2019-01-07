@@ -208,7 +208,6 @@ public class DayFour {
 		// first calculate the sleepMins
 		// if More than current sleepMins, then update lazyGuard, sleepMins, and
 		// mins
-
 		for (Map.Entry<Integer, Map<Integer, Integer>> entry : guardMap.entrySet()) {
 
 			currGuard = entry.getKey();

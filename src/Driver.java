@@ -47,7 +47,6 @@ public class Driver {
 	 */
 	public static void dayTwoPartOne() {
 		DayTwo dayTwo = new DayTwo();
-		Integer checksum;
 		File dayTwoInput = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayTwoInput");
 		dayTwo.findCheckSum(dayTwoInput);
 		System.out.println("Day Two Part One " + dayTwo.getCheckSum());
@@ -83,8 +82,6 @@ public class Driver {
 	public static void dayThreePartTwo() {
 		DayThree dayThree = new DayThree();
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayThreeInput");
-		// File file = new
-		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayThreeInputTest1");
 		dayThree.initializeGrid();
 		dayThree.makeGrid(file);
 		dayThree.findUniqueClaim(file);
@@ -96,11 +93,7 @@ public class Driver {
 	 * Day Four Part One: Repose Record
 	 */
 	public static void dayFourPartOne() {
-		DayFour dayFour = new DayFour();
-		// File file = new
-		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
-		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
-
+		DayFour dayFour = new DayFour();File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
 		dayFour.findLazyGuard();
