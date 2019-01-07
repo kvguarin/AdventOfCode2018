@@ -16,6 +16,7 @@ public class DayThree {
 	 */
 	public void makeGrid(File file) {
 		BufferedReader reader;
+		String line;
 		Integer claimID = 0;
 		int x;
 		int y;
@@ -24,8 +25,6 @@ public class DayThree {
 
 		try {
 			reader = new BufferedReader(new FileReader(file));
-			String line;
-
 			// gets x, y coordinate from line and inserts claim into the grid
 			while ((line = reader.readLine()) != null) {
 				claimID++;
