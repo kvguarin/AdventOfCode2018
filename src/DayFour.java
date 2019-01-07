@@ -57,7 +57,7 @@ public class DayFour {
 	private void addEntry(String line) {
 		String[] line2 = line.split("]");
 		chronMap.put(line2[0] + "]", line2[1]);
-
+		return;
 	}
 
 	/*
@@ -68,6 +68,7 @@ public class DayFour {
 			System.out.print(entry.getKey());
 			System.out.println(entry.getValue());
 		}
+		return;
 	}
 
 	/*
@@ -91,17 +92,13 @@ public class DayFour {
 
 			} else if (entry.getValue().startsWith(" falls")) {
 				// time guard falls asleep
-				System.out.println(entry.getKey());
-				System.out.println(entry.getKey().substring(entry.getKey().length() - 3, entry.getKey().length() - 1));
 				fallsAsleep = Integer
 						.parseInt(entry.getKey().substring(entry.getKey().length() - 3, entry.getKey().length() - 1));
 
 			} else {
 				// time guard wakes up Save this onto the tree
-				System.out.println(entry.getValue());
 				wakesUp = Integer
 						.parseInt(entry.getKey().substring(entry.getKey().length() - 3, entry.getKey().length() - 1));
-				// TODO: save value into tree
 				insertSleepTime(guard, fallsAsleep, wakesUp);
 			}
 		}
@@ -123,10 +120,6 @@ public class DayFour {
 
 			Map<Integer, Integer> minutesAsleep = guardMap.get(guard);
 
-			// for (Map.Entry<Integer, Integer> entry :
-			// minutesAsleep.entrySet()){
-			//
-			// }
 			for (int i = fallsAsleep; i < wakesUp; i++) {
 				if (minutesAsleep.containsKey(i)) {
 					int count = minutesAsleep.get(i);
@@ -172,10 +165,9 @@ public class DayFour {
 	 * guard will be asleep
 	 */
 	public void findLazyGuard() {
-		int lazyGuard = 0; // Guard with the most sleepmins
+		int guard = 0; // Guard with the most sleepmins
 		int totalMins = 0; // Number of minutes guard was asleep
 		int minute = 0; // Most Likely minute Guard will be asleep
-
 		int currGuard;
 		int curTotalMins; // Number of mins guard was asleep
 		int curMinute = 0; // Most likely minute current guard will be asleep
@@ -202,7 +194,7 @@ public class DayFour {
 
 				// If number of times asleep is more than current number of
 				// times, then it will change the current number of times this
-				// guard was alseep at said time
+				// guard was asleep at said time
 				if (entry2.getValue() > curNumTimes) {
 					curNumTimes = entry2.getValue();
 					curMinute = entry2.getKey();
@@ -211,17 +203,26 @@ public class DayFour {
 
 			if (curTotalMins > totalMins) {
 				totalMins = curTotalMins;
-				lazyGuard = currGuard;
+				guard = currGuard;
 				minute = curMinute;
 
 			}
 
 		}
-		
-		System.out.println("Guard: " + lazyGuard);
+
+		System.out.println("Guard: " + guard);
 		System.out.println("Total mins " + totalMins);
 		System.out.println("Most likely minute " + minute);
+		System.out.println("Answer : " + guard + " * " + minute + " = " + guard * minute);
 
+	}
+	
+	
+	/*
+	 * 
+	 */
+	public void findMinuteMan(){
+		
 	}
 
 }
