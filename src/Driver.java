@@ -11,6 +11,7 @@ public class Driver {
 		// dayTwoPartTwo(); //Answer: kqzxdenujwcstybmgvyiofrrd
 		// dayThreePartOne(); // Answer: 105231
 		// dayThreePartTwo(); //Answer: 164
+		dayFourPartOne();
 
 	}
 
@@ -92,6 +93,13 @@ public class Driver {
 	 * Day Four Part One: Repose Record
 	 */
 	public static void dayFourPartOne() {
+		DayFour dayFour = new DayFour();
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
+		dayFour.organizeFile(file);
+		// TODO: make another map that is organized by guard Number and sleep
+		// times
+		// From there, calculate the guard who has slept the most
+		// Afterwards, Find the time that he is most likely asleep
 		return;
 	}
 
