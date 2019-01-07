@@ -14,7 +14,7 @@ public class Driver {
 		// dayThreePartOne(); // Answer: 105231
 		// dayThreePartTwo(); //Answer: 164
 		// dayFourPartOne(); //Answer: 98640
-		dayFourPartTwo(); //Answer: 9763
+		dayFourPartTwo(); // Answer: 9763
 
 	}
 
@@ -93,7 +93,8 @@ public class Driver {
 	 * Day Four Part One: Repose Record
 	 */
 	public static void dayFourPartOne() {
-		DayFour dayFour = new DayFour();File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
+		DayFour dayFour = new DayFour();
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
 		dayFour.findLazyGuard();
@@ -105,10 +106,9 @@ public class Driver {
 	 */
 	public static void dayFourPartTwo() {
 		DayFour dayFour = new DayFour();
-//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
-		 File file = new
-		 File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
-
+		// File file = new
+		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
 		dayFour.findMinuteMan();
