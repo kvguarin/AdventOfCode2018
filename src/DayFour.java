@@ -3,27 +3,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.spi.FileSystemProvider;
-import java.util.Map.Entry;
-
-import javax.imageio.stream.MemoryCacheImageInputStream;
-import javax.sound.midi.VoiceStatus;
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-
-import org.omg.CORBA.portable.ValueBase;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class DayFour {
 
-	//Record in chronological order
+	// Record in chronological order
 	private Map<String, String> chronMap = new TreeMap<>();
 	// Sorts individual guard Sleep times
 	private Map<Integer, Map<Integer, Integer>> guardMap = new TreeMap<>();
 
-	
 	public void organizeFile(File file) {
 		BufferedReader reader;
 
