@@ -171,6 +171,13 @@ public class DayFour {
 	 * guard will be asleep
 	 */
 	public void findLazyGuard() {
+		int lazyGuard = 0; // Guard with the most sleepmins
+		int sleepMins = 0; // Number of minutes guard was asleep
+		int minute = 0; // Most Likely minute Guard will be asleep
+
+		// first calculate the sleepMins
+		// if More than current sleepMins, then update lazyGuard, sleepMins, and
+		// mins
 
 	}
 
