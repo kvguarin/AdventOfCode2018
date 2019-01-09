@@ -101,7 +101,7 @@ public class Driver {
 		return;
 	}
 
-	/*
+	/**
 	 * Day Four Part Two: Repose Record
 	 */
 	public static void dayFourPartTwo() {
@@ -112,6 +112,14 @@ public class Driver {
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
 		dayFour.findMinuteMan();
+		return;
+	}
+
+	/**
+	 * Day Five Part One: Alchemical Reduction
+	 */
+	public static void dayFivePartOne() {
+		DayFive dayFive = new DayFive();
 		return;
 	}
 
