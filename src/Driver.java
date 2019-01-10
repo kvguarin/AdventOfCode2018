@@ -137,7 +137,7 @@ public class Driver {
 		
 		for(int i = 65 ; i < 91;i++){//< 91; i++){
 			dayFive.makeString(file);
-			dayFive.removeLetter(i, 0);
+			dayFive.removeLetter(i);
 			dayFive.parseString(0);
 			dayFive.parseString(0);
 			dayFive.parseString(0);

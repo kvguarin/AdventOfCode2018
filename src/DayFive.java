@@ -67,6 +67,7 @@ public class DayFive {
 				this.string.delete(i, i + 2);
 				done = false;
 				i--; // TODO: check if there is a better way to do this
+//				i = 0;
 			}
 		}
 
@@ -91,12 +92,9 @@ public class DayFive {
 		int a = letters.charAt(0);
 		int b = letters.charAt(1);
 		// if the letters are the same (Aa or aA), then it will return true
-		// TODO: need separate to see if AA or aa for part A
-		if (32 == Math.abs(a - b)) {// || 0 == Math.abs(a - b)) {
+		if (32 == Math.abs(a - b)) {
 			return true;
-		} else {
-			// System.out.println("RETURNING FALSE");
-		}
+		} 
 		return false;
 	}
 
@@ -114,22 +112,12 @@ public class DayFive {
 	 * 
 	 * @param a
 	 */
-	public void removeLetter(int a, int index) {
-
+	public void removeLetter(int a) {
 		String string = this.string.toString();
 		string = string.replaceAll(Character.toString((char) a), "");
 		string = string.replaceAll(Character.toString((char) (a + 32)), "");
-//		this.string.delete(0, this.string.length());
 		this.string.replace(0, this.string.length(), string);
-//		this.string.append(string);
 		return;
-	}
-
-	/**
-	 * Removes the letters and finds the shortest polymer
-	 */
-	public void shortedPolymer() {
-
 	}
 
 	public void printPolymers() {
