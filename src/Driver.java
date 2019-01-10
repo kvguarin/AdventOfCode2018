@@ -135,9 +135,8 @@ public class Driver {
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
 //		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
 		
-		for(int i = 65 ; i < 92;i++){//< 91; i++){
+		for(int i = 65 ; i < 91;i++){//< 91; i++){
 //			int i /= 67;
-			System.out.println("letter: " + (char)i);
 			dayFive.makeString(file);
 			dayFive.removeLetter((char)i, 0);
 			dayFive.parseString(0);

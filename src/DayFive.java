@@ -110,17 +110,27 @@ public class DayFive {
 	 * @param a
 	 */
 	public void removeLetter(char a, int index) {
-
-//		System.out.println(this.string);
-		if (checkLetters(a + this.string.substring(index, index + 1))) {
-			this.string.delete(index, index + 1);
-			if(index == this.string.length()){
-				return;
+		
+		
+		for(int i = 0; i < this.string.length(); i++){
+			if (checkLetters(a + this.string.substring(i, i + 1))) {
+				this.string.delete(i, i + 1);
+				i--;
 			}
-			removeLetter(a, index);
-		}else if (index < this.string.length() - 1){
-			removeLetter(a, index + 1);
 		}
+
+//		if (index == this.string.length()) {
+//			return;
+//		}
+//
+//		// System.out.println(this.string);
+//		if (checkLetters(a + this.string.substring(index, index + 1))) {
+//			this.string.delete(index, index + 1);
+//			removeLetter(a, index);
+//		}
+//		if (index < this.string.length() - 1) {
+//			removeLetter(a, index + 1);
+//		}
 		return;
 	}
 
