@@ -132,16 +132,16 @@ public class Driver {
 		DayFive dayFive = new DayFive();
 		char c;
 		int answer = 1000000;
-//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
-		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
+//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
 		
-		for(int i = 65 ; i < 91; i++){
+		for(int i = 65 ; i < 92;i++){//< 91; i++){
 //			int i /= 67;
 			System.out.println("letter: " + (char)i);
 			dayFive.makeString(file);
-			dayFive.removeLetter((char)i);
+			dayFive.removeLetter((char)i, 0);
 			dayFive.parseString(0);
-			System.out.println(dayFive.getCount());
+//			System.out.println(dayFive.getCount());
 			if (dayFive.getCount() < answer){
 				answer = dayFive.getCount();
 			}

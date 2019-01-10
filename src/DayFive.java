@@ -15,7 +15,7 @@ import java.io.IOException;
 public class DayFive {
 
 	private StringBuilder string; // string of individual
-														// polymers
+									// polymers
 
 	/**
 	 * Parses through the file and saves the contents into a StringBuilder
@@ -87,58 +87,52 @@ public class DayFive {
 		int a = letters.charAt(0);
 		int b = letters.charAt(1);
 		// if the letters are the same (Aa or aA), then it will return true
-		if (32 == Math.abs(a - b) || 0 == Math.abs(a - b) ) {
+		if (32 == Math.abs(a - b) || 0 == Math.abs(a - b)) {
 			return true;
-		}else{
-//			System.out.println("RETURNING FALSE");
+		} else {
+			// System.out.println("RETURNING FALSE");
 		}
 		return false;
 	}
-	
-
 
 	/**
 	 * Returns the number of polymers
+	 * 
 	 * @return
 	 */
 	public int getCount() {
 		return this.string.length();
 	}
-	
-	
+
 	/**
 	 * Removes all letters that are lowercase or uppercase char a
+	 * 
 	 * @param a
 	 */
-	public void removeLetter(char a){
-		for(int i = 0; i < this.string.length(); i++){
-			//same letter, so remove
-			if (checkLetters(a + this.string.substring(i, i+1))){
-					this.string.delete(i, i+1);
-					i--;
+	public void removeLetter(char a, int index) {
+
+//		System.out.println(this.string);
+		if (checkLetters(a + this.string.substring(index, index + 1))) {
+			this.string.delete(index, index + 1);
+			if(index == this.string.length()){
+				return;
 			}
+			removeLetter(a, index);
+		}else if (index < this.string.length() - 1){
+			removeLetter(a, index + 1);
 		}
 		return;
 	}
-	
-	
+
 	/**
 	 * Removes the letters and finds the shortest polymer
 	 */
-	public void shortedPolymer(){
-		
-		
-		
-		
+	public void shortedPolymer() {
+
 	}
-	
-	
-	public void printPolymers(){
+
+	public void printPolymers() {
 		System.out.println(this.string);
 	}
-	
-	
-	
-	
 
 }
