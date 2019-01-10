@@ -54,6 +54,9 @@ public class DayFive {
 	 * @param first
 	 *            index of first letter
 	 */
+	/**
+	 * @param first
+	 */
 	public void parseString(int first) {
 		Boolean done = true; // checks to see if no stripping of the string was
 
@@ -63,6 +66,7 @@ public class DayFive {
 				// remove the first two letters
 				this.string.delete(i, i + 2);
 				done = false;
+				i--; // TODO: check if there is a better way to do this
 			}
 		}
 
@@ -87,7 +91,8 @@ public class DayFive {
 		int a = letters.charAt(0);
 		int b = letters.charAt(1);
 		// if the letters are the same (Aa or aA), then it will return true
-		if (32 == Math.abs(a - b) || 0 == Math.abs(a - b)) {
+		// TODO: need separate to see if AA or aa for part A
+		if (32 == Math.abs(a - b)) {// || 0 == Math.abs(a - b)) {
 			return true;
 		} else {
 			// System.out.println("RETURNING FALSE");
@@ -110,36 +115,36 @@ public class DayFive {
 	 * @param a
 	 */
 	public void removeLetter(int a, int index) {
-		
-		String string;
-//		if(checkLetters(a + this.string.substring(index, index+1))){
-				string= this.string.toString();
-				System.out.println(Character.toString((char)a));
-				string = string.replaceAll(Character.toString((char)a), "");
-				string = string.replaceAll(Character.toString((char)(a + 32)), "");
-				this.string.delete(0, this.string.length());
-				this.string.append(string);
-//		}
-//		for(int i = 0; i < this.string.length(); i++){
-//			if (checkLetters(a + this.string.substring(i, i + 1))) {
-////				this.string.delete(i, i + 1);
-//				this.string.deleteCharAt(i);
-//				i--;
-//			}
-//		}
 
-//		if (index == this.string.length()) {
-//			return;
-//		}
-//
-//		// System.out.println(this.string);
-//		if (checkLetters(a + this.string.substring(index, index + 1))) {
-//			this.string.delete(index, index + 1);
-//			removeLetter(a, index);
-//		}
-//		if (index < this.string.length() - 1) {
-//			removeLetter(a, index + 1);
-//		}
+		String string;
+		// if(checkLetters(a + this.string.substring(index, index+1))){
+		string = this.string.toString();
+		System.out.println(Character.toString((char) a));
+		string = string.replaceAll(Character.toString((char) a), "");
+		string = string.replaceAll(Character.toString((char) (a + 32)), "");
+		this.string.delete(0, this.string.length());
+		this.string.append(string);
+		// }
+		// for(int i = 0; i < this.string.length(); i++){
+		// if (checkLetters(a + this.string.substring(i, i + 1))) {
+		//// this.string.delete(i, i + 1);
+		// this.string.deleteCharAt(i);
+		// i--;
+		// }
+		// }
+
+		// if (index == this.string.length()) {
+		// return;
+		// }
+		//
+		// // System.out.println(this.string);
+		// if (checkLetters(a + this.string.substring(index, index + 1))) {
+		// this.string.delete(index, index + 1);
+		// removeLetter(a, index);
+		// }
+		// if (index < this.string.length() - 1) {
+		// removeLetter(a, index + 1);
+		// }
 		return;
 	}
 

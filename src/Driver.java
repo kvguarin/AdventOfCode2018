@@ -15,8 +15,8 @@ public class Driver {
 		// dayThreePartTwo(); //Answer: 164
 		// dayFourPartOne(); //Answer: 98640
 		// dayFourPartTwo(); // Answer: 9763
-//		dayFivePartOne(); // Answer: 11252
-		dayFivePartTwo();
+		dayFivePartOne(); // Answer: 11252
+//		dayFivePartTwo();
 
 	}
 
@@ -139,7 +139,7 @@ public class Driver {
 			dayFive.makeString(file);
 			dayFive.removeLetter(i, 0);
 			dayFive.parseString(0);
-//			System.out.println(dayFive.getCount());
+			
 			if (dayFive.getCount() < answer){
 				answer = dayFive.getCount();
 			}
