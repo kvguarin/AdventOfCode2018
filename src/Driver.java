@@ -120,6 +120,14 @@ public class Driver {
 	 */
 	public static void dayFivePartOne() {
 		DayFive dayFive = new DayFive();
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
+
+		// File file = new
+		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
+
+		// TODO: Read file and save as string builder
+		// TODO: write recursive function
+
 		return;
 	}
 
