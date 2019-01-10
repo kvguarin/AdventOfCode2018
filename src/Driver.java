@@ -15,7 +15,8 @@ public class Driver {
 		// dayThreePartTwo(); //Answer: 164
 		// dayFourPartOne(); //Answer: 98640
 		// dayFourPartTwo(); // Answer: 9763
-		dayFivePartOne(); // Answer: 11252
+//		dayFivePartOne(); // Answer: 11252
+		dayFivePartTwo();
 
 	}
 
@@ -122,7 +123,6 @@ public class Driver {
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
 		dayFive.makeString(file);
 		dayFive.parseString(0);
-		dayFive.getCount();
 		System.out.println("Day Five Part One: " + dayFive.getCount());
 		return;
 	}
@@ -130,8 +130,27 @@ public class Driver {
 	
 	public static void dayFivePartTwo(){
 		DayFive dayFive = new DayFive();
-		File file = new File("");
+		char c;
+		int answer = 1000000;
+//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
+		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
 		
+//		for(int i = 65 ; i < 69;i++){//< 91; i++){
+			int i = 67;
+			System.out.println("letter: " + (char)i);
+			dayFive.makeString(file);
+			dayFive.removeLetter((char)i);
+			dayFive.parseString(0);
+			System.out.println(dayFive.getCount());
+			if (dayFive.getCount() < answer){
+				answer = dayFive.getCount();
+//			}
+			System.out.print("polymers: ");
+			dayFive.printPolymers();
+//			System.out.println("Letter "+ (char)65 + " count: " + dayFive.getCount());
+		}
+
+		System.out.println("Day Five Part Two: " + answer);
 		return;
 	}
 

@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class DayFive {
 
-	private StringBuilder string = new StringBuilder(); // string of individual
+	private StringBuilder string; // string of individual
 														// polymers
 
 	/**
@@ -25,7 +25,8 @@ public class DayFive {
 	public void makeString(File file) {
 		BufferedReader reader;
 		String line;
-
+		this.string = new StringBuilder();
+		this.string.delete(0, this.string.length());
 		try {
 			reader = new BufferedReader(new FileReader(file));
 
@@ -85,10 +86,14 @@ public class DayFive {
 	private Boolean checkLetters(String letters) {
 		int a = letters.charAt(0);
 		int b = letters.charAt(1);
-
+		System.out.println(letters);
 		// if the letters are the same (Aa or aA), then it will return true
-		if (32 == Math.abs(a - b)) {
+		if (32 == Math.abs(a - b) || 0 == Math.abs(a - b) ) {
+			System.out.println("RETURNING TRUE");
+			System.out.println("letters are " + letters);
 			return true;
+		}else{
+//			System.out.println("RETURNING FALSE");
 		}
 		return false;
 	}
@@ -109,8 +114,9 @@ public class DayFive {
 	 * @param a
 	 */
 	public void removeLetter(char a){
+		System.out.println(a);
 		for(int i = 0; i < this.string.length(); i++){
-			
+			System.out.println(this.string.substring(i, i+1));
 			//same letter, so remove
 			if (checkLetters(a + this.string.substring(i, i+1))){
 					this.string.delete(i, i+1);
@@ -119,7 +125,21 @@ public class DayFive {
 		return;
 	}
 	
-	public void 
+	
+	/**
+	 * Removes the letters and finds the shortest polymer
+	 */
+	public void shortedPolymer(){
+		
+		
+		
+		
+	}
+	
+	
+	public void printPolymers(){
+		System.out.println(this.string);
+	}
 	
 	
 	
