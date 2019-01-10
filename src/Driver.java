@@ -135,8 +135,8 @@ public class Driver {
 //		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
 		
-//		for(int i = 65 ; i < 69;i++){//< 91; i++){
-			int i = 67;
+		for(int i = 65 ; i < 91; i++){
+//			int i /= 67;
 			System.out.println("letter: " + (char)i);
 			dayFive.makeString(file);
 			dayFive.removeLetter((char)i);
@@ -144,9 +144,9 @@ public class Driver {
 			System.out.println(dayFive.getCount());
 			if (dayFive.getCount() < answer){
 				answer = dayFive.getCount();
-//			}
-			System.out.print("polymers: ");
-			dayFive.printPolymers();
+			}
+//			System.out.print("polymers: ");
+//			dayFive.printPolymers();
 //			System.out.println("Letter "+ (char)65 + " count: " + dayFive.getCount());
 		}
 
