@@ -116,35 +116,12 @@ public class DayFive {
 	 */
 	public void removeLetter(int a, int index) {
 
-		String string;
-		// if(checkLetters(a + this.string.substring(index, index+1))){
-		string = this.string.toString();
-		System.out.println(Character.toString((char) a));
+		String string = this.string.toString();
 		string = string.replaceAll(Character.toString((char) a), "");
 		string = string.replaceAll(Character.toString((char) (a + 32)), "");
-		this.string.delete(0, this.string.length());
-		this.string.append(string);
-		// }
-		// for(int i = 0; i < this.string.length(); i++){
-		// if (checkLetters(a + this.string.substring(i, i + 1))) {
-		//// this.string.delete(i, i + 1);
-		// this.string.deleteCharAt(i);
-		// i--;
-		// }
-		// }
-
-		// if (index == this.string.length()) {
-		// return;
-		// }
-		//
-		// // System.out.println(this.string);
-		// if (checkLetters(a + this.string.substring(index, index + 1))) {
-		// this.string.delete(index, index + 1);
-		// removeLetter(a, index);
-		// }
-		// if (index < this.string.length() - 1) {
-		// removeLetter(a, index + 1);
-		// }
+//		this.string.delete(0, this.string.length());
+		this.string.replace(0, this.string.length(), string);
+//		this.string.append(string);
 		return;
 	}
 

@@ -16,7 +16,7 @@ public class Driver {
 		// dayFourPartOne(); //Answer: 98640
 		// dayFourPartTwo(); // Answer: 9763
 		dayFivePartOne(); // Answer: 11252
-//		dayFivePartTwo();
+		dayFivePartTwo(); //Answer 6118
 
 	}
 
@@ -138,6 +138,8 @@ public class Driver {
 		for(int i = 65 ; i < 91;i++){//< 91; i++){
 			dayFive.makeString(file);
 			dayFive.removeLetter(i, 0);
+			dayFive.parseString(0);
+			dayFive.parseString(0);
 			dayFive.parseString(0);
 			
 			if (dayFive.getCount() < answer){
