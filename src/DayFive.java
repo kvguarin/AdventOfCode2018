@@ -5,9 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class DayFive {
-	// this is a class
-	private StringBuilder string = new StringBuilder();
-	// private String string = "";
+
+	private StringBuilder string = new StringBuilder(); // string of individual
+														// polymers
 
 	/**
 	 * Parses through the file and saves the contents into a StringBuilder
@@ -16,8 +16,8 @@ public class DayFive {
 	 */
 	public void makeString(File file) {
 		BufferedReader reader;
-
 		String line;
+
 		try {
 			reader = new BufferedReader(new FileReader(file));
 
@@ -35,52 +35,34 @@ public class DayFive {
 			e.printStackTrace();
 		}
 
-		System.out.println(this.string);
 		return;
 	}
 
 	/**
 	 * Parses the string builder and removes the polymers so that no capital
 	 * letter is next to it's lower case version of itself
+	 * 
+	 * @param first
+	 *            index of first letter
 	 */
 	public void parseString(int first) {
 		Boolean done = true; // checks to see if no stripping of the string was
 
-//		if (first < this.string.length() - 1) {
-//
-//			// System.out.println(this.string.length());
-//			if (checkLetters(this.string.substring(first, first + 2))) {
-//				// First two letters are a match (Aa or aA), so then it will
-//				// remove the first
-//				// two letters
-//				this.string.delete(first, first + 2);
-//				// this.string = this.string.substring(first, first+2);
-//				done = false;
-//			}
-//			// System.out.println(this.string);
-//			parseString(first + 1);
-//
-//		}
-		
-		for(int i = 0; i < this.string.length()-1; i++){
-			// System.out.println(this.string.length());
+		for (int i = 0; i < this.string.length() - 1; i++) {
 			if (checkLetters(this.string.substring(i, i + 2))) {
 				// First two letters are a match (Aa or aA), so then it will
-				// remove the first
-				// two letters
+				// remove the first two letters
 				this.string.delete(i, i + 2);
-				// this.string = this.string.substring(first, first+2);
 				done = false;
 			}
 		}
 
 		// Returns if there are no more letters that match that are adjacent to
 		// one another
-		if (done) {
-			return;
+		if (!done) {
+			parseString(0);
 		}
-		parseString(0);
-
+		return;
 	}
 
 	/**
@@ -103,13 +85,12 @@ public class DayFive {
 		return false;
 	}
 
-	public void print() {
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println(this.string);
-		System.out.println();
-		System.out.println("units " + this.string.length());
+	/**
+	 * Returns the number of polymers
+	 * @return
+	 */
+	public int getCount() {
+		return this.string.length();
 	}
 
 }

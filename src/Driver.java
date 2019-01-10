@@ -15,7 +15,7 @@ public class Driver {
 		// dayThreePartTwo(); //Answer: 164
 		// dayFourPartOne(); //Answer: 98640
 		// dayFourPartTwo(); // Answer: 9763
-		dayFivePartOne();
+		dayFivePartOne(); // Answer: 11252
 
 	}
 
@@ -120,25 +120,13 @@ public class Driver {
 	 * Day Five Part One: Alchemical Reduction
 	 */
 	public static void dayFivePartOne() {
-		
 		DayFive dayFive = new DayFive();
-//		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFiveInputTest1");
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
 		
 		dayFive.makeString(file);
-		// TODO: Read file and save as string builder
-		// TODO: write recursive function
 		dayFive.parseString(0);
-		dayFive.print();
-
-		// StringBuilder stringBuilder = new StringBuilder();
-		// stringBuilder.append("hello its me");
-		//// System.out.println(stringBuilder.substring(0, 200));
-		// String letters = "Iic";
-		// int a = letters.charAt(0);
-		// int b = letters.charAt(1);
-		// System.out.println(a);
-		// System.out.println(b);
+		dayFive.getCount();
+		System.out.println("Day Five Part One: " + dayFive.getCount());
 
 		return;
 	}
