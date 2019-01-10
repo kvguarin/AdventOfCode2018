@@ -107,8 +107,6 @@ public class Driver {
 	 */
 	public static void dayFourPartTwo() {
 		DayFour dayFour = new DayFour();
-		// File file = new
-		// File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/TestInputs/DayFourInputTest1");
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFourInput");
 		dayFour.organizeFile(file);
 		dayFour.createGuardMap();
@@ -122,12 +120,18 @@ public class Driver {
 	public static void dayFivePartOne() {
 		DayFive dayFive = new DayFive();
 		File file = new File("/Users/KyVGuarin/Documents/Programming/AdventOfCode2018/Inputs/DayFiveInput");
-		
 		dayFive.makeString(file);
 		dayFive.parseString(0);
 		dayFive.getCount();
 		System.out.println("Day Five Part One: " + dayFive.getCount());
-
+		return;
+	}
+	
+	
+	public static void dayFivePartTwo(){
+		DayFive dayFive = new DayFive();
+		File file = new File("");
+		
 		return;
 	}
 

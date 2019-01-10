@@ -4,6 +4,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * @author KyVGuarin
+ *
+ */
+/**
+ * @author KyVGuarin
+ *
+ */
 public class DayFive {
 
 	private StringBuilder string = new StringBuilder(); // string of individual
@@ -84,6 +92,8 @@ public class DayFive {
 		}
 		return false;
 	}
+	
+
 
 	/**
 	 * Returns the number of polymers
@@ -92,5 +102,27 @@ public class DayFive {
 	public int getCount() {
 		return this.string.length();
 	}
+	
+	
+	/**
+	 * Removes all letters that are lowercase or uppercase char a
+	 * @param a
+	 */
+	public void removeLetter(char a){
+		for(int i = 0; i < this.string.length(); i++){
+			
+			//same letter, so remove
+			if (checkLetters(a + this.string.substring(i, i+1))){
+					this.string.delete(i, i+1);
+			}
+		}
+		return;
+	}
+	
+	public void 
+	
+	
+	
+	
 
 }
