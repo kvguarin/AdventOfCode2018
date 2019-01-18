@@ -145,12 +145,15 @@ public class Driver {
 			if (dayFive.getCount() < answer){
 				answer = dayFive.getCount();
 			}
-//			System.out.print("polymers: ");
-//			dayFive.printPolymers();
-//			System.out.println("Letter "+ (char)i + " count: " + dayFive.getCount());
+			
 		}
 		System.out.println("Day Five Part Two: " + answer);
 		return;
+	}
+	
+	
+	public static void daySixPartOne(){
+		DaySix daySix = new DaySix();
 	}
 
 }
